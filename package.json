@@ -1,0 +1,33 @@
+{
+  "name": "burgers",
+  "version": "1.0.0",
+  "description": "burger logger with MySQL Node Express Handlebars and ORM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdrachenberg/burgers.git"
+  },
+  "keywords": [
+    "burger",
+    "node",
+    "MySQL",
+    "Express",
+    "Handlebars",
+    "ORM"
+  ],
+  "author": "Ryan Drachenberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdrachenberg/burgers/issues"
+  },
+  "homepage": "https://github.com/rdrachenberg/burgers#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
+}
