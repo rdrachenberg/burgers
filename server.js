@@ -3,6 +3,7 @@ var burger = require("./controllers/burgers_controller");
 var methodOverride = require("method-override")
 
 var express = require("express");
+
 var bodyParser = require("body-parser");
 
 var PORT = process.env.PORT || 3008;
@@ -12,7 +13,8 @@ var app = express();
 app.use(methodOverride("_method"));
 
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static(__dirname + "public"));
+app.use(express.static(__dirname + "/burgers/public"));
+app.use(express.static(process.cwd() + "/public"));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));

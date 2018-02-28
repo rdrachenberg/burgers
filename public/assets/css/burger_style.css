@@ -1,8 +1,12 @@
 li {
     padding: 15px;
     margin: 15px;
-    background: #ffffff;
+    background: lightblue;
     list-style: none;
+    border-radius: 25px;
+    text-align: center;
+    width: 225px;
+    height: 50px;
 }
 
 ul {
@@ -23,16 +27,30 @@ ul {
 
 img {
     align-content: center;
+    max-width: 25;
+    max-height: auto;
 }
 
 h1 {
     text-align: center;
-    text-shadow: 2px 2px #ffffff;
+    
+    color: red;
+    background-color: lightgray;
+    border-radius: 15px;
+    text-align: center;
+    max-width: auto;
+    height: 50px;
+    
 }
 
 h2 {
     text-align: center;
-    text-shadow: 2px 2px #ffffff;
+    text-shadow: 2px 2px black;
+    color: whitesmoke;
+}
+
+h3 {
+    color: white;
 }
 
 .create-update-form {
@@ -56,12 +74,12 @@ body {
 }
 
 body {
-    background-image: url(http://glimpsesofcharleston.com/wp-content/uploads/2015/02/french-fries17908686_lrg.jpg);
+    background-image: url("/assets/img/mainBurger.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #000000;
+    background-color: CadetBlue;
 }
 
 div,
