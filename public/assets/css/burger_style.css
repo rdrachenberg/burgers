@@ -31,9 +31,8 @@ h1 {
 justify-content: center;
 padding-left: 100px;
 max-width: auto;
-color: #black;
+color: black;
 text-shadow: 2px 2px red;
-
 }
 
 h2 {
@@ -49,17 +48,6 @@ h2 {
 h3 {
     color: white;
 }
-
-/* .insertOne-form {
-   padding: 15px;
-   margin: 15px;
-   background: lightblue;
-   list-style: none;
-   border-radius: 25px;
-   text-align: center;
-   width: 400px;
-   height: 50px;
-} */
 
 html,
 body {
@@ -137,7 +125,6 @@ div.transbox p {
 
 .item-d {
     grid-area: main;
-    /* /* align-content: center; */
     align-items: center;
     list-style: none;
     border-radius: 25px;
