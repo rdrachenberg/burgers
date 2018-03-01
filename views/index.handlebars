@@ -1,17 +1,16 @@
-<div class="container bg">
+<div class="container-bg">
     <div class="row">
-        <div class="center col-sm-12">
-                {{!-- <img src="/assets/img/mainBurger.jpg" alt="Bob's Burgers App"> --}}
-            
-            <h1>Bob's "Eat-da-burger" Burgers</h1>
-            <p></p>
+        <div class="transbox">
+            <div class="item-a">
+                <h1>
+                    <strong>Bob's "Eat-da-burger" Burgers</strong>
+                </h1>
+            </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6">
-            <br>
-            <h2>Available Sandwiches!</h2>
-            <h3>Pick one to eat!!</h3>
+        <div class="item-b">
+            <h2>Waiting to be devoured!</h2>
             <ul>
                 {{#each burgers}} {{#unless this.devoured}}
                 <li>
@@ -19,7 +18,7 @@
 
                     <form action="/api/burgers/{{this.id}}?_method=PUT" method="POST">
                         <input type="hidden" name="devoured" value="true">
-                        <button class="btn-primary" type="submit">Eat It!</button>
+                        <button class="btn-primary" type="submit">Devour it !</button>
                     </form>
 
                 </li>
@@ -28,7 +27,7 @@
 
         </div>
 
-        <div class="col-sm-6">
+        <div class="item-c">
 
             <h2>Eaten burgers!</h2>
 
@@ -42,16 +41,26 @@
         </div>
 
     </div>
+<script type="text/javascript">
 
+    $(".transbox").hover(function() {
+        $(this).delay(5000).hide();
+        $(this).replaceWith('<iframe src="https://giphy.com/embed/11ZStfKZSXJN1S" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bobs-burgers-cheeseburger-11ZStfKZSXJN1S">');
+        $(".item-d").append("<div>" + "<br>" + '<iframe src="https://giphy.com/embed/11ZStfKZSXJN1S" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bobs-burgers-cheeseburger-11ZStfKZSXJN1S">');
+    });
+    $(".item-d").hover('hover', function() {
+        $(".item-d").append("<div>" + "<br>" + '<iframe src="https://giphy.com/embed/11ZStfKZSXJN1S" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bobs-burgers-cheeseburger-11ZStfKZSXJN1S">');
+    });
+    
+</script>
     <div class="row">
-        <div class="center col-sm-12">
+        <div class="item-d">
 
-            <h2>Create A Burger!</h2>
+            <h2 class="createBurgerText">Create A Burger!</h2>
 
-            <form class="create-update-form" action="/api/burgers" method="POST">
+            <form class="insertOne-form" action="/api/burgers" method="POST">
             <div class="form-group">
-            <p>Enter the name of the Burger you would like.</p>
-                    <input type="text" id="" name="burger_name">
+                    <input type="text" id="" name="burger_name" placeholder="Enter burger name here" class="inputBox">
                     <input type="hidden" name="devouered" value="false">
                 </div>
 
