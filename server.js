@@ -13,7 +13,7 @@ var app = express();
 app.use(methodOverride("_method"));
 
 // Serve static content for the app from the "public" directory in the application directory.
-// app.use(express.static(__dirname + "/burgers/public"));
+app.use(express.static(__dirname + "/burgers/public"));
 app.use(express.static(process.cwd() + "/public"));
 
 // parse application/x-www-form-urlencoded
