@@ -1,3 +1,4 @@
 node_modules
 burgers.code-workspace
 snipps.js
+.env
