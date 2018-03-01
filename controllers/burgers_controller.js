@@ -40,13 +40,5 @@ router.put("/api/burgers/:id", function (req, res) {
     });
 });
 
-// router.delete("/:id", function (req, res) {
-//     var condition = "id = " + req.params.id;
-
-//     burgers.delete(condition, function () {
-//         res.redirect("/");
-//     });
-// });
-
-// Export routes for server.js to use.
+// Export module routes
 module.exports = router;
